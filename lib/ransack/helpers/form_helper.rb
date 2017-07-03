@@ -141,7 +141,7 @@ module Ransack
         private
 
           def parameters_hash(params)
-            if ::ActiveRecord::VERSION::MAJOR == 5 && params.respond_to?(:to_unsafe_h)
+            if ::Rails::VERSION::MAJOR == 5 && params.respond_to?(:to_unsafe_h)
               params.to_unsafe_h
             else
               params
